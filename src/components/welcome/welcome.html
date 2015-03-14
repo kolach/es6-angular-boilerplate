@@ -1,0 +1,17 @@
+<h1>Welcome, {{welcome.user.fullName}}!</h1>
+
+
+<md-content class="md-padding">
+
+    <form name="welcomeForm" ng-submit="welcome.changeName(name)">
+        <md-input-container>
+            <label for="username">Username</label>
+            <input id="username" ng-model="name">
+        </md-input-container>
+
+        <md-button class="md-raised md-primary">
+            Change Name
+        </md-button>
+
+    </form>
+</md-content>
