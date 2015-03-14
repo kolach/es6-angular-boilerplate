@@ -27,14 +27,14 @@ AppController.$inject =['$router'];
 
 angular
     .module('app', ['ngNewRouter', 'ngAnimate', 'ngAria', 'ngMaterial', 'templates'])
-    .config(configure)
+    .config(configureComponentLoader)
     .controller('AppController', AppController)
     .controller('NavigationController', NavigationController)
     .controller('WelcomeController', WelcomeController)
 ;
 
-configure.$inject = ['$componentLoaderProvider'];
-function configure($componentLoaderProvider) {
+configureComponentLoader.$inject = ['$componentLoaderProvider'];
+function configureComponentLoader($componentLoaderProvider) {
     $componentLoaderProvider.setTemplateMapping(function (name) {
         // name == component name
         return `src/components/${name}/${name}.html`;
