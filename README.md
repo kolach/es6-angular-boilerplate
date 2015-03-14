@@ -30,6 +30,7 @@ gulp watch
 ```bash
 gulp test:unit
 gulp test:unit:watch
+```
 
 ### WTF is ES6?
 Simply, the next version of JavaScript that contains some really cool features. You might check out some of these:
@@ -63,12 +64,16 @@ The Angular Material project is an implementation of Material Design in Angular.
 Task runner to make defining and running the tasks simpler.
 
 #### [Karma]
+Productive testing environment to developers
 
 #### [Mocha]
+Mocha is a feature-rich JavaScript test framework running on node.js and the browser, making asynchronous testing simple and fun.
 
 #### [Chai]
+Chai is a BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
 
 #### [Sinon]
+Standalone test spies, stubs and mocks for JavaScript. No dependencies, works with any unit testing framework.
 
 [ES6]: http://wiki.ecmascript.org/doku.php?id=harmony:specification_drafts
 [Babel]: http://babeljs.io/
@@ -78,4 +83,8 @@ Task runner to make defining and running the tasks simpler.
 [AngularJS New Router]: https://github.com/angular/router
 [Angular Material]: https://material.angularjs.org
 [Gulp]: http://gulpjs.com/
+[Karma]: http://karma-runner.github.io/
+[Mocha]: http://mochajs.org/
+[Chai]: http://chaijs.com/
+[Sinon]: http://sinonjs.org/
 
