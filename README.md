@@ -1,7 +1,19 @@
 ## ES6 Babel Browserify Boilerplate
 
-This is an boilerplate repo to make it easy to experiment with [ES6]. It's inspired by [es6-browserify-boilerplate](https://github.com/thoughtram/es6-browserify-boilerplate) but uses babel (formerly 6to5) for transpilation which does not depend on any runtime.
+This is an boilerplate repo to make it easy to experiment with [ES6]. 
+It's inspired by [es6-browserify-boilerplate](https://github.com/thoughtram/es6-browserify-boilerplate) but uses babel 
+(formerly 6to5) for transpilation which does not depend on any runtime.
 
+[Angular Material] is set up for UI. 
+
+[AngularJS New Router] is used for component oriented routing.
+
+The following frameworks stack is currently set up for unit tests:
+
+- [Karma]
+- [Mocha]
+- [Chai]
+- [Sinon]
 
 ### Initial setup
 
