@@ -11,7 +11,9 @@ var reload = browserSync.reload;
 var concat = require('gulp-concat');
 var html2js = require('gulp-html2js');
 var sass = require('gulp-sass');
+var ngAnnotate = require('gulp-ng-annotate');
 var karma = require('gulp-karma');
+
 
 var config = {
 
@@ -26,7 +28,7 @@ var config = {
         src: './src/**/*.html',
         outputFile: 'templates.js',
         outputModuleName: 'templates',
-        outputDir: './tmp/'
+        outputDir: './src/'
     },
 
     sass: {
@@ -40,7 +42,7 @@ var config = {
             src: [
                 './src/**/*.js',
                 './node_modules/angular-mocks/angular-mocks.js',
-                './test/unit/**/*.js'
+                './test/unit/**/*.js',
             ]
         }
     }
@@ -67,6 +69,7 @@ function bundle() {
         .bundle()
         .on('error', function(err) { console.log('Error: ' + err.message); })
         .pipe(source(config.js.outputFile))
+        .pipe(ngAnnotate())
         .pipe(gulp.dest(config.outputDir))
         .pipe(reload({ stream: true }));
 }

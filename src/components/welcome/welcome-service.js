@@ -1,4 +1,4 @@
-import {User} from '../user/user-model';
+import {User} from './user';
 
 class WelcomeService {
 
@@ -8,4 +8,4 @@ class WelcomeService {
 
 }
 
-export const welcomeService = new WelcomeService();
+export {WelcomeService};

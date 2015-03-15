@@ -1,8 +1,7 @@
-import {welcomeService} from './welcome-service';
-
 class WelcomeController {
 
-    constructor() {
+    /*@ngInject*/
+    constructor(welcomeService) {
         this.user = welcomeService.createUser();
     }
 
