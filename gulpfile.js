@@ -14,6 +14,8 @@ var sass = require('gulp-sass');
 var ngAnnotate = require('gulp-ng-annotate');
 var karma = require('gulp-karma');
 
+var protractor = require("gulp-protractor").protractor;
+var webdriver_standalone = require("gulp-protractor").webdriver_standalone;
 
 var config = {
 
@@ -28,7 +30,7 @@ var config = {
         src: './src/**/*.html',
         outputFile: 'templates.js',
         outputModuleName: 'templates',
-        outputDir: './src/'
+        outputDir: './tmp/'
     },
 
     sass: {
@@ -42,7 +44,12 @@ var config = {
             src: [
                 './src/**/*.js',
                 './node_modules/angular-mocks/angular-mocks.js',
-                './test/unit/**/*.js',
+                './test/unit/**/*.js'
+            ]
+        },
+        e2e: {
+            src: [
+                './test/e2e/**/*.js'
             ]
         }
     }
@@ -137,6 +144,20 @@ gulp.task('test:unit:watch', function() {
         }));
 });
 
+// E2E tests
+
+gulp.task('webdriver_standalone', webdriver_standalone);
+
+gulp.task('test:e2e', function() {
+    gulp.src(config.test.e2e.src)
+        .pipe(protractor({
+            configFile: "protractor.config.js",
+            args: ['--baseUrl', 'http://127.0.0.1:3001']
+        }))
+        .on('error', function (e) {
+            throw e
+        });
+});
 
 // WEB SERVER
 gulp.task('serve', function () {
