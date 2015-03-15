@@ -1,8 +1,9 @@
 module.exports = function(config) {
 	config.set({
 
-		//browsers: ['Chrome'],
-		browsers: ['PhantomJS'],
+		browsers: ['Chrome'],
+		//browsers: ['PhantomJS'],
+
 
 		basePath: './',
 		frameworks: ['browserify', 'mocha', 'chai', 'chai-as-promised', 'sinon-chai', 'chai-things'],

@@ -6,6 +6,8 @@ import 'angular-material';
 
 import '../tmp/templates';
 
+import './components/welcome';
+
 import {NavigationController} from './components/navigation/navigation-controller';
 import {WelcomeController} from './components/welcome/welcome-controller';
 
@@ -26,11 +28,10 @@ class AppController {
 AppController.$inject =['$router'];
 
 angular
-    .module('app', ['ngNewRouter', 'ngAnimate', 'ngAria', 'ngMaterial', 'templates'])
+    .module('app', ['ngNewRouter', 'ngAnimate', 'ngAria', 'ngMaterial', 'templates', 'welcome'])
     .config(configureComponentLoader)
     .controller('AppController', AppController)
     .controller('NavigationController', NavigationController)
-    .controller('WelcomeController', WelcomeController)
 ;
 
 configureComponentLoader.$inject = ['$componentLoaderProvider'];

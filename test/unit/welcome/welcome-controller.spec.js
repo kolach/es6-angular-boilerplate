@@ -1,18 +1,19 @@
-
-import {welcomeService} from '../../../src/components/welcome/welcome-service';
+import {WelcomeService} from '../../../src/components/welcome/welcome-service';
 import {WelcomeController} 	from '../../../src/components/welcome/welcome-controller';
 
 describe('WelcomeController', () => {
 
 	let ctrl;
+	let service;
 
 	beforeEach( () => {
-		sinon.spy(welcomeService, 'createUser');
-		ctrl = new WelcomeController();
+		service = new WelcomeService();
+		sinon.spy(service, 'createUser');
+		ctrl = new WelcomeController(service);
 	});
 
 	it('Should call welcomeService.createUser() in constructor', () => {
-		expect(welcomeService.createUser).to.have.been.called;
+		expect(service.createUser).to.have.been.called;
 	});
 
 });
