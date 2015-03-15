@@ -1,4 +1,4 @@
-import {User} from './user';
+import User from './user';
 
 class WelcomeService {
 
@@ -6,6 +6,7 @@ class WelcomeService {
         return new User('John', 'Smith');
     };
 
+
 }
 
-export {WelcomeService};
+export default WelcomeService;

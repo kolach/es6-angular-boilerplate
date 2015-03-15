@@ -10,4 +10,4 @@ class WelcomeController {
     };
 }
 
-export {WelcomeController}
+export default WelcomeController;

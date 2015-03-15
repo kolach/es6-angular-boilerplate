@@ -3,4 +3,4 @@ class NavigationController {
     constructor() {}
 }
 
-export {NavigationController}
+export default NavigationController;

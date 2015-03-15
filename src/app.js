@@ -5,13 +5,12 @@ import 'angular-aria';
 import 'angular-material';
 
 import '../tmp/templates';
-
+import './components/navigation';
 import './components/welcome';
 
-import {NavigationController} from './components/navigation/navigation-controller';
-import {WelcomeController} from './components/welcome/welcome-controller';
-
 class AppController {
+
+    /*@ngInject*/
     constructor($router) {
         $router.config([
             {
@@ -25,13 +24,15 @@ class AppController {
     }
 }
 
-AppController.$inject =['$router'];
-
 angular
-    .module('app', ['ngNewRouter', 'ngAnimate', 'ngAria', 'ngMaterial', 'templates', 'welcome'])
+    .module('app', [
+        'ngNewRouter', 'ngAnimate', 'ngAria', 'ngMaterial',
+        'templates',
+        'navigation',
+        'welcome'
+    ])
     .config(configureComponentLoader)
     .controller('AppController', AppController)
-    .controller('NavigationController', NavigationController)
 ;
 
 configureComponentLoader.$inject = ['$componentLoaderProvider'];

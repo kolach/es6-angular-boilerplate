@@ -1,5 +1,5 @@
-import {WelcomeService} from '../../../src/components/welcome/welcome-service';
-import {WelcomeController} 	from '../../../src/components/welcome/welcome-controller';
+import WelcomeService from '../../../src/components/welcome/welcome-service';
+import WelcomeController 	from '../../../src/components/welcome/welcome-controller';
 
 describe('WelcomeController', () => {
 
